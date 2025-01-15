@@ -1,0 +1,32 @@
+{
+  "manifestVersion": "1.0",
+  "version": "1.0",
+  "id": "example-deployer-extension-assembly",
+  "name": "Example deployer extension",
+  "author": "RWS Group",
+  "description": "Deployer Service Extension compatible with udp 12.0.0-1353",
+  "requireConfiguration": "yes",
+  "extensions": [
+    {
+      "name": "deployer-extension",
+      "type": "CDDeployerExtension",
+      "supportedVersions": "12.0",
+      "properties": {
+        "entryPoint": "com.sdl.delivery.deployer.steps.extension.TridionDeployerExtensionActivator",
+        "loadingPhase": "AFTER_APP_INITIALIZED",
+        "configurationSources": [
+          {
+            "name": "pipeline-conf",
+            "type": "XML",
+            "properties": {
+              "xmlFileName": "example-deployer-extension-pipeline.xml"
+            }
+          }
+        ],
+        "capabilities": [
+          "DeployerCapability"
+        ]
+      }
+    }
+  ]
+}
