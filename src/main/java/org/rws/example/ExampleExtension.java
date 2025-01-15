@@ -16,7 +16,7 @@ import static com.sdl.delivery.deployer.steps.util.TridionStepUtil.getPackageUnz
 import static com.tridion.transport.transportpackage.TransportPackage.DEPLOY_ACTION;
 import static com.tridion.transport.transportpackage.TransportPackage.UNDEPLOY_ACTION;
 
-@Step("PageStateNotifier")
+@Step("ExampleExtension")
 public class ExampleExtension implements ExecutableStep {
     private static final Logger LOG = LoggerFactory.getLogger(ExampleExtension.class);
 
